@@ -1,0 +1,17 @@
+version: "3"
+services:
+  www:
+    image: nginx
+    restart: always
+    expose:
+      - "80"
+    volumes:
+      - ./:/usr/share/nginx/html:ro
+    environment:
+      - VIRTUAL_HOST=roseline.roseline.pe,www.roseline.roseline.pe
+      - LETSENCRYPT_HOST=roseline.roseline.pe,www.roseline.roseline.pe
+      - LETSENCRYPT_EMAIL=miguekos1233@gmail.com
+networks:
+  default:
+    external:
+      name: nginx-proxy_default
