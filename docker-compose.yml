@@ -8,8 +8,8 @@ services:
     volumes:
       - ./:/usr/share/nginx/html:ro
     environment:
-      - VIRTUAL_HOST=catalogo.roseline.pe,www.catalogo.roseline.pe
-      - LETSENCRYPT_HOST=catalogo.roseline.pe,www.catalogo.roseline.pe
+      - VIRTUAL_HOST=bodarosa.roseline.pe,www.bodarosa.roseline.pe
+      - LETSENCRYPT_HOST=bodarosa.roseline.pe,www.bodarosa.roseline.pe
       - LETSENCRYPT_EMAIL=miguekos1233@gmail.com
 networks:
   default:
